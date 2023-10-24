@@ -1,0 +1,15 @@
+// Layout Style
+@import "./layout-style/auth.scss";
+@import "./layout-style/default.scss";
+
+// Main Style
+@import "./main-style/home.scss";
+@import "./main-style/category.scss";
+
+// Component Style
+@import "./component-style/header.scss";
+@import "./component-style/carosuel.scss";
+@import "./component-style/card.scss";
+@import "./component-style/menu.scss";
+
+@import "./base";

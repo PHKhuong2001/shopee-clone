@@ -1,0 +1,134 @@
+.carosuel {
+  width: 100%;
+  height: 235px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  .slider-banner {
+    width: 100%;
+    max-height: 100%;
+  }
+  &-link {
+    min-width: 100%;
+    transition: transform 1s; /* Thay đổi chỉ cấu hình transition cho transform */
+    &-image {
+      width: 100%;
+      height: 235px;
+      border-radius: 0.125rem;
+    }
+  }
+  &:hover .slick-prev,
+  &:hover .slick-next {
+    opacity: 1;
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-prev,
+  .slick-next {
+    &::before {
+      content: "";
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.32);
+    }
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.18);
+    width: 2.1875rem;
+    height: 3.75rem;
+    line-height: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease 0s;
+    .right-icon,
+    .left-icon {
+      display: block;
+      margin: calc(100% / 2) auto;
+      width: 1em;
+      height: 1em;
+      fill: #fff;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    transition: opacity 0.5s ease;
+    width: 100%;
+    text-align: center;
+    .dot {
+      &:not(:first-child) {
+        margin-left: 0.5rem;
+      }
+      width: 0.62rem;
+      height: 0.62rem;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      opacity: 1;
+      border: 1px solid hsla(0, 0%, 53.7%, 0.4);
+      background-color: hsla(0, 0%, 100%, 0.4);
+    }
+    .dot-active {
+      background-color: #ee4d2d;
+    }
+  }
+}
+.container-slider {
+  width: 100%;
+  height: 302px;
+  .slider {
+    width: 100%;
+    height: 100%;
+    .product {
+      width: 600px;
+      height: 300px;
+    }
+    .product-custom {
+      display: flex;
+      flex-wrap: wrap;
+      .product-item {
+        width: 100%;
+        height: 151px;
+        margin-block-end: 0;
+        &-link {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.87);
+          border-right: 1px solid rgba(0, 0, 0, 0.05);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          &:not(:nth-child(-n + 9)):nth-child(10n) {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider {
+    .ant-spin-container {
+      .ant-col {
+        padding: 0 !important;
+      }
+      .ant-row {
+        margin: 0 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,225 @@
+@use "../base";
+
+@mixin backgroundUrl() {
+  background-image: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/d116cfea2b5947f6e843a41013390d63.png");
+}
+@mixin image-icon() {
+  width: 22px;
+  height: 22px;
+  background-image: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7b95007f3377150730bbb5d1ddb477d6.png");
+}
+@mixin formContent() {
+  width: 1040px;
+  margin: 0 auto;
+  height: 600px;
+}
+.backgroundUrlSerller {
+  background-image: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/9ff6617feef144e41cf859e6fc534be2.png");
+}
+.backgroundUrlBuyer {
+  background-image: url("https://down-vn.img.susercontent.com/file/sg-11134004-7rbk0-lkqell0dtvmu11");
+}
+.container-form-authSeller,
+.container-form-authBuyer {
+  @include formContent();
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  .wrapper-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .text-content-auth {
+      margin-left: 40px;
+      margin-top: 35px;
+      max-width: 405px;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        word-break: keep-all;
+        color: #ee4d2d;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        font-weight: 400;
+      }
+      h1 {
+        margin-top: 4px;
+        font-size: 2.25rem;
+        font-weight: 500;
+        line-height: 2.625rem;
+        word-break: keep-all;
+        color: #ee4d2d;
+      }
+      .assets-text {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        p {
+          color: #ee4d2d;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          margin-left: 19px;
+        }
+        .assets-size {
+          width: 36px;
+          height: 28px;
+          flex-shrink: 0;
+        }
+        .assets-background-shop {
+          background-size: 3780.5555555555557% 948.6111111111111%;
+          background-position: 48.679245283018865% 1.6366612111292962%;
+        }
+        .assets-backgroundUrl-shop {
+          @include backgroundUrl();
+        }
+        .assets-background-gift {
+          background-size: 3780.5555555555557% 948.6111111111111%;
+          background-position: 36.22641509433962% 1.6366612111292962%;
+        }
+        .assets-backgroundUrl-gift {
+          @include backgroundUrl();
+        }
+        .assets-background-cooperation {
+          background-size: 3780.5555555555557% 1219.642857142857%;
+          background-position: 16.150943396226417% 1.594896331738437%;
+        }
+        .assets-backgroundUrl-cooperation {
+          @include backgroundUrl();
+        }
+      }
+    }
+  }
+}
+.hidden {
+  visibility: hidden !important;
+}
+
+.auth-form {
+  height: 428.97px;
+  width: 400px;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 4px;
+  overflow: hidden;
+  .wrapper-title {
+    width: 100%;
+    min-height: 80px;
+    .auth-form-title {
+      margin: 0;
+      max-width: 8.5rem;
+      font-size: 1.25rem;
+      color: #222;
+      font-weight: 400;
+      font-family: base.$fontFamily;
+      line-height: 1.3;
+    }
+  }
+  .wrapper-input {
+    overflow: hidden;
+    padding: 0 30px 30px;
+    .input-group {
+      margin-bottom: 10px;
+      height: 60px;
+      .input {
+        width: 100%;
+        height: 2.5rem;
+        border-radius: 0;
+        padding: 0.95rem;
+        font-family: base.$fontFamily;
+      }
+      // .errorColorBackground {
+      // }
+      .input-error {
+        margin: 0;
+        padding: 0.25rem 0 0;
+        font-size: 0.75rem;
+        color: #ff424f;
+        min-height: 1rem;
+        font-family: base.$fontFamily;
+      }
+    }
+    .submit-button {
+      height: 2.5rem;
+      min-width: 8.75rem;
+      border-radius: 3px;
+      width: 100%;
+      border: none;
+      color: #fff;
+      background-color: #ee4d2d;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.09);
+      font-family: base.$fontFamily;
+      text-transform: uppercase;
+      line-height: 1.2rem;
+      margin-bottom: 30px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .wrapper-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 14px;
+    .line {
+      height: 1px;
+      width: 100%;
+      background-color: #dbdbdb;
+      flex: 1;
+    }
+    .line-text {
+      color: #ccc;
+      padding: 0 16px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-family: base.$fontFamily;
+      line-height: 1.2;
+    }
+  }
+  .wrapper-fb-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .button-signIn {
+      box-sizing: border-box;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.26);
+      background-color: #fff;
+      color: rgba(0, 0, 0, 0.87);
+      padding: 0 2px;
+      border-radius: 2px;
+      width: 100%;
+      height: 40px;
+      font-size: 0.875rem;
+      padding-right: 8px;
+      width: 165px;
+      margin: 5px;
+      font-family: base.$fontFamily;
+      &:hover {
+        color: #222;
+        border: 1px solid rgba(0, 0, 0, 0.26);
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+      .image-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .fb {
+          @include image-icon();
+          background-size: 325% 287.5%;
+          background-position: 5.555555555555555% 62.666666666666664%;
+        }
+        .google {
+          @include image-icon();
+          background-size: 722.2222222222222% 638.8888888888889%;
+          background-position: 83.92857142857143% 5.154639175257732%;
+        }
+      }
+    }
+  }
+}

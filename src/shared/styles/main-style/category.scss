@@ -1,0 +1,258 @@
+@use "../base";
+.category-page {
+  @extend %page-shared;
+  margin-top: 1.875rem !important;
+  .section-banner {
+    width: base.$width-layout;
+    margin: 0 auto;
+  }
+}
+
+.shopee-mall {
+  .shopee-mall-image {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.products {
+  margin-top: 1.875rem;
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    .category-menu {
+      flex: 0 0 11.875rem;
+      min-width: 0;
+      margin: 0 1.25rem 1.25rem 0;
+      height: 500px;
+      .shopee-category-list {
+        width: 100%;
+        &__header {
+          text-transform: capitalize;
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.8);
+          height: 3.125rem;
+          line-height: 3.125rem;
+          font-weight: 700;
+          font-size: 1rem;
+          display: block;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          margin-bottom: 0.625rem;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          &-icon {
+            width: 0.75rem;
+            height: 1rem;
+            fill: currentColor;
+            margin-right: 0.625rem;
+          }
+        }
+        .shopee-category-list__category {
+          width: 100%;
+        }
+      }
+      .shopee-search-filter-status {
+        margin-top: 1.875rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.8);
+        height: 1.875rem;
+        font-weight: 700;
+        font-size: 1rem;
+        .shopee-svg-icon {
+          font-size: 0.75rem;
+          margin-right: 0.625rem;
+          stroke: currentColor;
+          width: 1em;
+          height: 1em;
+          fill: currentColor;
+        }
+      }
+      .button-reset-filter {
+        height: 1.875rem;
+        margin: 1.25rem 0 0;
+        text-transform: uppercase;
+        font-weight: 400;
+        width: 100%;
+        background-color: rgb(238, 77, 45);
+        cursor: pointer;
+        border: 0;
+        font-size: 0.875rem;
+        line-height: 1;
+        color: #ffffff;
+        border-radius: 2px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+      .shopee-filter-group {
+        padding: 1.25rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+        &__header {
+          margin-bottom: 0.625rem;
+          font-weight: 500;
+          font-family: base.$fontFamily;
+          width: 100%;
+        }
+        .folding-items {
+          width: 100%;
+          .checkbox {
+            display: flex;
+            align-items: flex-start;
+            padding: 0.5rem 0;
+            line-height: 1.2;
+            .ant-checkbox {
+              width: 13px;
+              height: 13px;
+              &-inner {
+                width: 13px;
+                height: 100%;
+                border-radius: 0;
+              }
+            }
+            span {
+              font-family: base.$fontFamily;
+              &:first-child {
+                align-self: flex-start;
+                margin-top: 0.0625rem;
+              }
+              &:nth-child(2) {
+                line-height: 1rem;
+                max-height: 3rem;
+                word-wrap: break-word;
+                font-size: 0.875rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .category-products {
+      flex: 1;
+      width: 0;
+      min-width: 0;
+      .shopee-sort-bar {
+        font-weight: 400;
+        background: rgba(0, 0, 0, 0.03);
+        padding: 0.8125rem 1.25rem;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        &__label {
+          color: #555;
+          margin: 0 0.3125rem 0 0;
+          font-weight: 400;
+          font-family: base.$fontFamily;
+        }
+        .shopee-sort-by-options {
+          display: flex;
+          align-items: stretch;
+          flex: 1;
+          grid-gap: 0.625rem;
+          gap: 0.625rem;
+          justify-content: flex-start;
+          .button-options-filter {
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.02);
+            height: 2.125rem;
+            line-height: 2.125rem;
+            border-radius: 2px;
+            border: 0;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            flex: 0 0 5.625rem;
+            text-transform: capitalize;
+            padding: 0 0.9375rem;
+            background: #fff;
+            white-space: nowrap;
+            margin-left: 0.625rem;
+            box-sizing: border-box;
+            &:hover {
+              color: #333;
+            }
+            &.option-selected {
+              color: #ffffff;
+              background-color: rgb(238, 77, 45);
+            }
+          }
+        }
+      }
+      .shopee-item-result {
+        margin: 0.5rem 0 0;
+      }
+    }
+  }
+}
+
+.shopee-category-list__sub-category {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  padding: 0.5rem 0.625rem 0.5rem 0.75rem;
+  line-height: 1rem;
+  max-height: 3rem;
+  word-wrap: break-word;
+}
+
+.shopee-category-list__sub-category {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  padding: 0.5rem 0.625rem 0.5rem 0.75rem;
+  position: relative;
+  line-height: 1rem;
+  max-height: 3rem;
+  word-wrap: break-word;
+  font-family: base.$fontFamily;
+  &:hover {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  .active-icon {
+    height: 7px;
+    width: 7px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    margin-top: 4px;
+    fill: #ee4d2d;
+  }
+  &.active-link {
+    color: #ee4d2d;
+    .active-icon {
+      opacity: 1;
+      :not(svg) {
+        transform-origin: 0px 0px;
+      }
+    }
+  }
+}
+.collapse-more {
+  .ant-collapse-content-box {
+    padding: 0 !important;
+  }
+  .ant-collapse-header {
+    padding: 0.5rem 0.625rem 0.5rem 1.25rem !important;
+  }
+}
+
+.hide-header {
+  .ant-collapse-header {
+    padding: 0 !important;
+  }
+}

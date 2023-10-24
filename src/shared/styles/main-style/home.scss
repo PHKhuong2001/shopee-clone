@@ -1,0 +1,204 @@
+@use "../base";
+
+%section-below-the-fold {
+  width: 100%;
+  .category-title,
+  .product-list {
+    min-height: 18.875rem;
+    margin-top: 1.25rem;
+    background-color: #fff;
+    .product-header {
+      text-align: center;
+      cursor: pointer;
+    }
+    .custom-header {
+      background: #fff;
+      height: 3.75rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 0 1.25rem;
+      &-title {
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.54);
+        font-family: base.$fontFamily;
+        margin: 0;
+        text-transform: uppercase;
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: 1.25rem;
+      }
+    }
+    .content-carosuel {
+      width: 390px;
+      height: 452px;
+      display: inline-block;
+      padding: 10px 0 10px 10px;
+      background-color: #fff;
+      vertical-align: top;
+    }
+    .tabs {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 7.375rem;
+      z-index: 999;
+      width: 100%;
+      background-color: #fff;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.25rem;
+        background-color: #ee4d2d;
+        transition: opacity 0.3s;
+      }
+    }
+  }
+}
+.home-page {
+  @extend %page-shared;
+  .section-banner {
+    padding-top: 30px;
+    margin-top: 0;
+    border-radius: 0.125rem;
+    overflow: hidden;
+    min-height: 383px;
+    .wrapper-banner-carosuel,
+    .wrapper-banner-benefit {
+      width: base.$width-layout;
+      margin: 0 auto;
+    }
+    .wrapper-banner-benefit {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px auto 0;
+      width: base.$width-layout;
+      min-height: 108px;
+      background-color: #fff;
+      .benefit-links {
+        .benefit-image {
+          width: 100px;
+          margin: 18px auto 8px;
+          text-align: center;
+          .image {
+            width: 45px;
+            height: 45px;
+          }
+        }
+        .benefit-title {
+          width: 100px;
+          .title {
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            font-size: 0.8125rem;
+            line-height: 0.875rem;
+            max-width: 150px;
+            margin-bottom: 8px;
+            word-wrap: break-word;
+            overflow: hidden;
+            white-space: pre-line;
+            color: #222;
+            letter-spacing: 0;
+            text-align: center;
+            font-family: base.$fontFamily;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .wrapper-banner-carosuel {
+      min-height: 235px;
+      max-height: 235px;
+      .banner-carosuel-main {
+        background-color: blue;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+        border-radius: 0.125rem;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        overflow: hidden;
+        flex-grow: 2;
+        flex-shrink: 1;
+        flex-basis: 0;
+        max-height: 2;
+      }
+      .banner-carosuel-right {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.3125rem;
+        .right-image {
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.87);
+          display: block;
+          background-position: 50%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+          border-radius: 0.125rem;
+          overflow: hidden;
+          flex: 1 1 50%;
+          background-position: bottom;
+          border-top-right-radius: 2px;
+          overflow: hidden;
+          max-height: 115px;
+          &:not(:first-child) {
+            margin-top: 0.3125rem;
+          }
+          &-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #fafafa;
+            .image {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+              opacity: 1;
+              transition: opacity 0.2s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-container {
+  width: base.$width-layout;
+  margin: 0 auto;
+  @extend %section-below-the-fold;
+  .container-voucher {
+    width: base.$width-layout;
+    overflow: hidden;
+    position: relative;
+    .image-voucher {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+    }
+    .links-voucher {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      .links {
+        flex-grow: 33.3333;
+        text-indent: -9999px;
+        display: inline-block;
+        overflow: hidden;
+        cursor: pointer;
+      }
+    }
+  }
+}

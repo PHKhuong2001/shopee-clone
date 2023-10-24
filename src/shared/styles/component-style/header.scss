@@ -1,0 +1,271 @@
+@use "../base";
+.header-auth {
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 84px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);
+  &-wrapper {
+    width: base.$width-layout;
+    margin: 0 auto;
+    svg:not(:root) {
+      overflow: hidden;
+    }
+    .m2rqmO {
+      height: 42px !important;
+      margin-top: -10px;
+      margin-right: -18px;
+    }
+    .LybVoA {
+      fill: #ee4d2d !important;
+    }
+    .icon-shopee-logo {
+      width: 11.875rem !important;
+      height: 4rem;
+      fill: #fff;
+    }
+    .shopee-svg-icon {
+      display: inline-block;
+      width: 9em;
+      height: 9em;
+      fill: currentColor;
+      position: relative;
+    }
+    svg:not(:root) {
+      overflow-clip-margin: content-box;
+      overflow: hidden;
+    }
+    .h3 {
+      color: #222;
+      font-size: 1.53rem;
+      font-weight: 400;
+      line-height: 1.21;
+    }
+  }
+  &-link {
+    color: #ee4d2d;
+    font-size: 0.875rem;
+    margin-right: 15px;
+    cursor: pointer;
+    line-height: 2.3;
+  }
+}
+
+.header {
+  &-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  height: 119px;
+  z-index: 100;
+  background: #f53d2d;
+  background: linear-gradient(-180deg, #f53d2d, #f63);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  .container {
+    min-width: inherit;
+    height: 2.125rem;
+    z-index: 400;
+    background: transparent;
+  }
+  &-navbar {
+    max-width: base.$width-layout;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .navbar-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.8125rem;
+      font-weight: 300;
+      padding: 0.25rem;
+      position: relative;
+      overflow: visible;
+      outline: 0;
+      font-family: base.$fontFamily;
+      line-height: 1.2;
+    }
+    .ml {
+      margin-left: 10px;
+    }
+    .navbar-link-spread {
+      position: relative;
+      &::after {
+        content: "";
+        height: 0.9375rem;
+        width: 0;
+        border-left: 1px solid hsla(0, 0%, 100%, 0.22);
+        border-right: 1px solid hsla(0, 0%, 100%, 0.22);
+        position: absolute;
+        left: -6px;
+        top: calc(50% - 7px);
+      }
+    }
+  }
+  .navbar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 2.125rem;
+    .navbar-item {
+      &-wrapper {
+        .item-link {
+          .icon-notification-navbar {
+            width: 0.875rem;
+            height: 1.125rem;
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+  &-with-search {
+    margin-right: auto;
+    margin-left: auto;
+    width: base.$width-layout;
+    display: flex;
+    height: 5.3125rem;
+    padding: 1rem 0 0.625rem;
+    .logo-link {
+      line-height: 1.2;
+      // visibility: visible;
+      position: relative;
+      top: -0.1875rem;
+      padding-right: 2.5rem;
+      box-sizing: border-box;
+      &-image {
+        width: 162px;
+        height: 50px;
+        fill: #fff;
+      }
+    }
+    .shopee-search {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 840px;
+      position: relative;
+      &-bar {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        height: 2.5rem;
+        box-sizing: border-box;
+        padding: 0.1875rem;
+        border-radius: 2px;
+        background: #fff;
+        width: 100%;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.09);
+        line-height: 1.2;
+        &-input {
+          display: flex;
+          flex: 1;
+          box-sizing: border-box;
+          padding: 0 0.625rem;
+          position: relative;
+          .input {
+            border: 0px;
+            padding: 0;
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+        &-button {
+          height: 100%;
+          .button {
+            border: 0;
+            border-radius: 2px;
+            background: #fb6445;
+            height: 34px;
+            padding: 0 15px;
+            min-width: 60px;
+            max-width: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            .search-icon {
+              display: inline-block;
+              width: 1em;
+              height: 1em;
+              fill: currentColor;
+              position: relative;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+      &-links {
+        width: 100%;
+        display: flex;
+        &-wrapper {
+          margin-top: 0.1875rem;
+          height: 1.5rem;
+          font-size: 0.75rem;
+          font-weight: 300;
+          line-height: 1.5rem;
+          flex-wrap: nowrap;
+          overflow-y: visible;
+          flex-wrap: wrap;
+          overflow-y: clip;
+          .search-links {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.87);
+            outline: 0;
+            white-space: nowrap;
+            display: block;
+            color: rgba(0, 0, 0, 0.54);
+            color: hsla(0, 0%, 100%, 0.9);
+            height: 0.875rem;
+            line-height: 0.875rem;
+            margin-top: 0.3125rem;
+            margin-bottom: 0.3125rem;
+            font-family: base.$fontFamily;
+            &:not(:first-child) {
+              margin-left: 13px;
+            }
+          }
+        }
+      }
+    }
+    .shopee-cart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding-bottom: 5px;
+      margin: 0 10px;
+      height: 59px;
+      .cart-popup {
+        .cart-wrapper {
+          padding: 10px 0;
+          display: flex;
+          align-items: center;
+          justify-self: center;
+          .cart-link {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin: 0 0 0 5px;
+            position: relative;
+            overflow: visible;
+            outline: 0;
+            line-height: 1.2;
+            .cart-link-icon {
+              fill: currentColor;
+              width: 26px;
+              height: 26px;
+              cursor: pointer;
+              color: #fff;
+              stroke: #fff;
+              margin-right: 0.625rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

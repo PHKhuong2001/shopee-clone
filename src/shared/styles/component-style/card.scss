@@ -1,0 +1,56 @@
+@use "../base";
+.card {
+  max-height: 304px;
+  padding: 0.3125rem;
+  width: 200px;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(-6px);
+  }
+  &-product {
+    max-width: 186px;
+    border-color: rgba(0, 0, 0, 0.0902);
+    border-width: 0.5px;
+    border-radius: 0;
+    .ant-card-cover {
+      height: 186px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        border-radius: 0;
+        margin-inline-start: -1px;
+        margin-inline-end: -1px;
+      }
+    }
+    .ant-card-body {
+      width: 186px;
+      padding: 0.5rem;
+      border-radius: 0;
+      .product-text {
+        line-height: 1.25rem;
+        font-size: 0.875rem;
+        overflow-wrap: break-word;
+        max-height: 2.5rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      .product-price {
+        font-family: base.$fontFamily;
+        font-size: 1rem;
+        --tw-text-opacity: 1;
+        color: rgba(238, 77, 45, var(--tw-text-opacity));
+      }
+      .product-sold {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        color: rgba(0, 0, 0, 0.54118);
+        text-overflow: ellipsis;
+        height: 0.875rem;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+}
