@@ -1,14 +1,17 @@
 import { useState } from "react";
 
 function useLocalStorage() {
-    const [localStorage,setLocalStorage] = useState("");
-    const getLocalStorage = () => {
-        
+    const [getLocalValue,setLocalValue] = useState<any>(null);
+    const getLocalStorage = (nameItem: string) => {
+        setLocalValue(() => JSON.parse(localStorage.getItem(nameItem) || ""));
     }
-    const deleteLocalStorage = () => {
-
+    const setLocalStorage = (nameItem: string,data: any) => {
+        localStorage.setItem(nameItem,data);
     }
-    return {getLocalStorage,deleteLocalStorage};
+    const deleteLocalStorage = (nameItem: string) => {
+        localStorage.removeItem(nameItem);
+    }
+    return {getLocalStorage,deleteLocalStorage,setLocalStorage,getLocalValue};
 }
 
 export default useLocalStorage;
