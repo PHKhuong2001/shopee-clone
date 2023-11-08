@@ -5,6 +5,7 @@ const routes = {
   signupSeller: "/seller/signup",
   home: "/",
   category: "/:category",
+  product: "/product/:slug"
 };
 
 export default routes;

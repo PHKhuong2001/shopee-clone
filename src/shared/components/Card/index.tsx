@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 
 type PropsCardProduct<T> = {
   cards: T[];
+  className?: string
 };
-function CardProduct({ cards }: PropsCardProduct<string>) {
+function CardProduct({ cards, className }: PropsCardProduct<string>) {
   return (
-    <Link to={""} className="card">
+    <Link to={""} className={`card ${className}`}>
       <Card
         className="card-product"
         cover={

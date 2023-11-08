@@ -127,7 +127,7 @@ function Carosuel({
 
   if (type === "slide" || type === "shopee-mall") {
     return (
-      <Row className="container-slider">
+      <Row className="container-slider" style={{ ...style }}>
         <Slider {...settingsSliderProduct} className="slider">
           {handlerSeperateData()?.map((item, index) => {
             return (

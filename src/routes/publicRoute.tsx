@@ -6,6 +6,7 @@ import Buyer from "@/view/auth/BuyerForm/buyer";
 import Home from "@/view/pages/Home";
 import DefaultLayout from "@/layout/DefaultLayout";
 import Category from "@/view/pages/Category";
+import ProductDetail from "@/view/pages/ProductDetail";
 
 interface PublicRoute {
   path: string;
@@ -47,6 +48,11 @@ export const publicRoutes: PublicRoute[] = [
   {
     path: routes.category,
     element: <Category></Category>,
+    layout: DefaultLayout,
+  },
+  {
+    path: routes.product,
+    element: <ProductDetail></ProductDetail>,
     layout: DefaultLayout,
   },
 ];

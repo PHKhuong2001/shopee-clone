@@ -5,6 +5,7 @@
   top: 0;
   height: 84px;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
   &-wrapper {
     width: base.$width-layout;
     margin: 0 auto;
@@ -70,7 +71,9 @@
     background: transparent;
   }
   &-navbar {
-    max-width: base.$width-layout;
+    width: inherit;
+    // max-width: base.$width-layout;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;

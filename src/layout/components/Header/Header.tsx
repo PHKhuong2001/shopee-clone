@@ -74,6 +74,22 @@ function Header() {
                     </Link>
                   </div>
                 </li>
+                <li className="navbar-item">
+                  <div className="navbar-item-wrapper">
+                    <Link to={""} className="item-link">
+                      <NotifyHeaderIcon />
+                      <Typography.Text>Hỗ trợ</Typography.Text>
+                    </Link>
+                  </div>
+                </li>
+                <li className="navbar-item">
+                  <div className="navbar-item-wrapper">
+                    <Link to={""} className="item-link">
+                      <NotifyHeaderIcon />
+                      <Typography.Text>Tiếng việt</Typography.Text>
+                    </Link>
+                  </div>
+                </li>
               </ul>
             </Col>
           </Row>

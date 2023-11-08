@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from "react";
+import AuthForm from "../AuthForm";
+import { useLocation } from "react-router-dom";
 
 function Buyer() {
+  const { pathname } = useLocation();
+
   const textContentRef = useRef<HTMLDivElement | null>(null);
   const [hiddenContent, setHiddenContent] = useState({
     hidden: true,
@@ -43,7 +47,12 @@ function Buyer() {
           </>
         )}
       </div>
-      <div className="form-content-auth"></div>
+      <div className="form-content-auth">
+      <AuthForm
+        typeAuth="Seller"
+        typeForm={pathname.includes("login") ? "Đăng nhập" : "Đăng ký"}
+      />
+      </div>
     </div>
   );
 }

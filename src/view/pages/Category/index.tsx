@@ -48,17 +48,17 @@ function Category() {
       </Row>
       <main className="main-container">
         <section className="section-below-the-fold">
-          <Col className="category-title">
-            <Row className="custom-header d-flex align-center">
+          <Col className="category-title" style={{minHeight:"0"}}>
+            <Row className="custom-header d-flex align-center" style={{border: 0}}>
               <Typography.Title className="custom-header-title">
                 Danh Mục
               </Typography.Title>
             </Row>
-            <Row className="category-list">
+            <Row className="category-list" style={{height: "226px"}}>
               <Carosuel
                 dataSlide={shopeeMall}
                 type={"shopee-mall"}
-                style={{ width: "1200px" }}
+                style={{ width: "1200px",height: "226px" }}
                 lenghtDataItem={12}
                 lengthDataList={2}
               />
@@ -95,7 +95,7 @@ function Category() {
                 </div>
               </Row>
               <Row className="shopee-item-result">
-                <PaginatedCardList data={[]}></PaginatedCardList>
+                <PaginatedCardList paginationClassName="pagination" data={["1","2","3","4","5","6"]}></PaginatedCardList>
               </Row>
             </Col>
           </Row>

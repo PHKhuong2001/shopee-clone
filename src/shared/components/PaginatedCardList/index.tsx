@@ -1,10 +1,12 @@
-import { Card, List, Pagination } from "antd";
+import { List, Pagination } from "antd";
 import { useState } from "react";
+import CardProduct from "../Card";
 
 interface PropsPaginatedCard {
-  data: [];
+  data: string[];
+  paginationClassName?: string;
 }
-function PaginatedCardList({ data }: PropsPaginatedCard) {
+function PaginatedCardList({ data,paginationClassName }: PropsPaginatedCard) {
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 10; // Số thẻ trên mỗi trang
 
@@ -18,17 +20,16 @@ function PaginatedCardList({ data }: PropsPaginatedCard) {
   const paginatedData = data.slice(startIndex, endIndex);
 
   return (
-    <div>
+    <div style={{width: "100%"}}>
       <List
-        grid={{ gutter: 16, column: 5 }} // Điều này tạo một lưới 4 cột
+        grid={{ gutter: 2, column: 5 }} // Điều này tạo một lưới 4 cột
         dataSource={paginatedData}
         renderItem={(item) => (
-          <List.Item>
-            <Card title={""}>{/* Nội dung thẻ (Card) */}</Card>
-          </List.Item>
+              <CardProduct className="card__category" cards={[""]} />
         )}
       />
       <Pagination
+        className={paginationClassName}
         current={currentPage}
         pageSize={pageSize}
         total={data.length}

@@ -9,7 +9,7 @@ function ItemCarosel({ item, typeItem }: ItemProps) {
   return (
     <List.Item className={`product-item ${typeItem}`}>
       <Link to={item.path} className={`product-item-link`}>
-        <h5>{item?.name}</h5>
+        {item.name  && <h5>{item.name}</h5>}
         {typeItem === "shopee-mall" ? (
           <Row
             className={`${typeItem}-image`}

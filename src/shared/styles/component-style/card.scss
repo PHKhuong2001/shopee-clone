@@ -53,4 +53,12 @@
       }
     }
   }
+
+  &__category {
+    margin: 0.3125rem 0;
+    max-height: 338px;
+    max-width: fit-content;
+    padding: 0 0.3125rem;
+    display: flex;
+  }
 }

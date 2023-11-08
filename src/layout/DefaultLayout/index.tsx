@@ -1,5 +1,5 @@
 import { ChildrenLayout } from "@/shared/interfaces/interfaceLayout";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 
 function DefaultLayout({ children }: ChildrenLayout) {
   return (
